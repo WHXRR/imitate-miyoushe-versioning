@@ -1,7 +1,7 @@
 import api from '@/service'
 
 const getAppList = () => api({
-  url: '/appList',
+  url: '/api/appList',
   method: 'post',
 })
 
