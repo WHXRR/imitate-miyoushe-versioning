@@ -14,7 +14,6 @@ const getAppList = () => {
       created_at: formatTime(item.created_at),
     }));
   });
-  console.log(tableData);
 };
 getAppList();
 
