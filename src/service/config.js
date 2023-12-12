@@ -4,7 +4,6 @@ import { ElNotification } from 'element-plus'
 
 
 function httpErrorStatusHandle(error) {
-  if (axios.isCancel(error)) return
   let message = '';
   if (error && error.response) {
     switch (error.response.status) {
@@ -81,7 +80,6 @@ function myAxios(axiosConfig) {
     },
     err => {
       httpErrorStatusHandle(err);
-      err.config && removePendingKey(err.config);
       return Promise.reject(err)
     }
   )
