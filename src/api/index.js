@@ -6,7 +6,7 @@ const getAppList = () => api({
 })
 
 const getLatestVersion = () => api({
-  url: '/latestVersion',
+  url: '/api/latestVersion',
   method: 'post',
 })
 
@@ -17,8 +17,16 @@ const addAppVersion = (data) => api({
   tips: true
 })
 
+const delAppVersion = (data) => api({
+  url: '/del/appVersion',
+  method: 'post',
+  data,
+  tips: true
+})
+
 export default {
   getAppList,
   getLatestVersion,
-  addAppVersion
+  addAppVersion,
+  delAppVersion
 }
